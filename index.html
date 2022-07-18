@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Budget V1</title>
+  </head>
+  <body class="font-poppins">
+    <!--Top Section-->
+    <div class="bg-emerald-600 w-full h-80">
+      <div
+        class="flex flex-col items-center text-center space-y-4 py-9 text-white"
+      >
+        <div class="text-xl">
+          Available Budget in <span class="date">2022 :</span>
+        </div>
+        <div class="text-5xl">+ 0.00</div>
+        <div class="bg-teal-700 incomes">
+          <div>INCOME</div>
+          <div class="curr_income mr-[33px]">+ 0.00</div>
+        </div>
+        <div class="bg-red-600 expenses">
+          <div>EXPENSES</div>
+          <div class="curr_expenses">
+            - 0.00
+            <span
+              class="inline-block bg-white opacity-40 text-black px-[10px] ml-1"
+              >-</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Mid Section-->
+    <div class="bg-midColor p-4 border-b border-borderColor">
+      <div class="container mx-auto flex justify-center items-center">
+        <select class="add_type">
+          <option value="inc selected">+</option>
+          <option value="exp">-</option>
+        </select>
+        <input type="text" class="add_description w-[400px]" />
+        <input type="number" placeholder="value" class="add_value w-[100px]" />
+        <button class="add_btn">
+          <i class="ion-ios-checkmark-outline"></i>
+        </button>
+      </div>
+    </div>
+    <!--Bottom Section-->
+    <div class="flex gap-10 flex-wrap justify-center mt-10">
+      <div class="income_section w-[420px]">
+        <div
+          class="text-mainBlue text-xl border-b border-borderColor font-bold py-3"
+        >
+          INCOME
+        </div>
+        <div class="content">
+          Website project <span class="plus">+ 2,500.00</span>
+        </div>
+        <div class="content bg-midColor">
+          Logo design <span class="plus">+ 580.00</span>
+        </div>
+      </div>
+
+      <div class="expenses_section w-[420px]">
+        <div
+          class="text-red-500 text-xl border-b border-borderColor font-bold py-3"
+        >
+          EXPENSES
+        </div>
+        <div class="content">
+          Groceries 1
+          <div class="minus">
+            - 52.23
+            <span class="percent">2%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

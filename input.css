@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.expenses,
+.incomes {
+  @apply w-96 flex justify-between py-[10px] px-3;
+}
+
+.add_type {
+  @apply text-center w-[55px] h-11 text-[18px] bg-white text-inherit mr-[10px] border-borderColor border outline-none;
+}
+
+.add_description,
+.add_value {
+  @apply outline-none border border-borderColor bg-white text-inherit text-[14px] py-[12px] px-[15px] mr-[10px] rounded duration-300
+}
+
+.add_type:focus,
+.add_description:focus,
+.add_value:focus {
+  @apply border-mainBlue;
+}
+
+.add_btn {
+  @apply text-[35px] bg-none border-none text-mainBlue cursor-pointer ml-[10px];
+}
+
+.content {
+  @apply p-3 flex justify-between border-b border-borderColor;
+}
+
+.content .plus {
+  @apply text-mainBlue;
+}
+
+.content .minus {
+  @apply text-red-500;
+}
+
+.minus .percent {
+  @apply inline-block px-[10px] ml-1 bg-red-200;
+}
