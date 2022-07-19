@@ -22,10 +22,12 @@
   @apply outline-none border border-borderColor bg-white text-inherit text-[14px] py-[12px] px-[15px] mr-[10px] rounded duration-300
 }
 
-.add_type:focus,
-.add_description:focus,
-.add_value:focus {
+.blue-focus:focus {
   @apply border-mainBlue;
+}
+
+.red-focus:focus {
+  @apply border-red-500;
 }
 
 .add_btn {
@@ -33,7 +35,7 @@
 }
 
 .content {
-  @apply p-3 flex justify-between border-b border-borderColor;
+  @apply p-3 flex justify-between border-b border-borderColor capitalize;
 }
 
 .content .plus {

@@ -819,11 +819,14 @@ video {
   transition-duration: 300ms;
 }
 
-.add_type:focus, 
-.add_description:focus, 
-.add_value:focus {
+.blue-focus:focus {
   --tw-border-opacity: 1;
   border-color: rgb(40 185 181 / var(--tw-border-opacity));
+}
+
+.red-focus:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .add_btn {
@@ -843,6 +846,7 @@ video {
   --tw-border-opacity: 1;
   border-color: rgb(231 231 231 / var(--tw-border-opacity));
   padding: 0.75rem;
+  text-transform: capitalize;
 }
 
 .content .plus {

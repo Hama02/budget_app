@@ -6,20 +6,31 @@ document.querySelector(".date").textContent = date;
 let budget = document.querySelector(".budget");
 const btn = document.querySelector(".add_btn");
 
-// document.querySelector("select").onchange = (event) => {
-//   let type =
-//     document.querySelector(".add_type")[
-//       document.querySelector(".add_type").selectedIndex
-//     ].textContent;
-//   if (type == "+") {
-//     event.currentTarget.classList.remove("focus:border-red-500");
-//     event.currentTarget.classList.add("focus:border-mainBlue");
-//   } else {
-//     event.currentTarget.classList.remove("focus:border-mainBlue");
-//     event.currentTarget.classList.add("focus:border-red-500");
-//   }
-// };
-
+//Check inputs Border Color
+document.querySelector("select").onchange = (event) => {
+  let inputs = document.querySelectorAll("input");
+  let type =
+    document.querySelector(".add_type")[
+      document.querySelector(".add_type").selectedIndex
+    ].textContent;
+  if (type == "+") {
+    btn.style.color = "#28B9B5";
+    event.currentTarget.classList.remove("red-focus");
+    event.currentTarget.classList.add("blue-focus");
+    inputs.forEach((ele) => {
+      ele.classList.remove("red-focus");
+      ele.classList.add("blue-focus");
+    });
+  } else {
+    btn.style.color = "red";
+    event.currentTarget.classList.remove("blue-focus");
+    event.currentTarget.classList.add("red-focus");
+    inputs.forEach((ele) => {
+      ele.classList.remove("blue-focus");
+      ele.classList.add("red-focus");
+    });
+  }
+};
 //Event Handler
 btn.addEventListener("click", (event) => {
   let type =
