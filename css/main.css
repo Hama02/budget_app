@@ -617,10 +617,6 @@ video {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .h-80 {
   height: 20rem;
 }
@@ -740,6 +736,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }
 
 .text-white {
